@@ -1,0 +1,36 @@
+{
+  "order_id": "00030",
+  "user_id": 296797246,
+  "customer": {
+    "customer_id": "000012",
+    "name": "آقای ایمان کوهگرد",
+    "city": "تبریز"
+  },
+  "cart_items": [
+    {
+      "product_id": "curtain_6",
+      "product_name": "آنجل - حریر کتان - پانچ",
+      "size": "عرض: 135 - ارتفاع: 223.0م",
+      "quantity": 10,
+      "price": 1550000
+    }
+  ],
+  "payment_method": "پرداخت نقدی - 90day",
+  "pricing": {
+    "subtotal": 15500000,
+    "discount_rate": 0.25,
+    "discount": 3875000,
+    "tax": 1046250,
+    "total": 12671250
+  },
+  "status": "pending",
+  "created_at": "2025-08-11T09:06:03.149867",
+  "updated_at": "2025-08-11T09:06:03.149875",
+  "status_history": [
+    {
+      "status": "pending",
+      "timestamp": "2025-08-11T09:06:03.149877",
+      "note": "سفارش ایجاد شد"
+    }
+  ]
+}

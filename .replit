@@ -1,0 +1,97 @@
+modules = ["python-3.11"]
+
+[nix]
+channel = "stable-25_05"
+
+[workflows]
+runButton = "Start DecoTeen Bot"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Bot Server"
+
+[[workflows.workflow]]
+name = "Bot Server"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pip install python-telegram-bot==20.7 && python main.py"
+
+[[workflows.workflow]]
+name = "Start Bot"
+author = 45633364
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pip install python-telegram-bot==20.7 requests"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python main.py"
+
+[[workflows.workflow]]
+name = "Start Telegram Bot"
+author = 45633364
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pip install python-telegram-bot==21.6 requests"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python main.py"
+
+[[workflows.workflow]]
+name = "Bot Stable"
+author = 45451505
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pip install python-telegram-bot==20.7 requests"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python main.py"
+
+[[workflows.workflow]]
+name = "Run Bot"
+author = 45734195
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 main.py"
+
+[[workflows.workflow]]
+name = "Run Bot Fixed"
+author = 45734195
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 main.py"
+
+[[workflows.workflow]]
+name = "Start DecoTeen Bot"
+author = 45948967
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pip install python-telegram-bot==20.7 requests schedule"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python main.py"
+
+[agent]
+expertMode = true
